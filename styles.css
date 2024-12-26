@@ -1,7 +1,7 @@
 /* Reset básico */
 @font-face {
     font-family: retrica;
-    src: url(/contents/fonts/retrica/Retrica.otf)
+    src: url(contents/fonts/retrica/Retrica.otf)
   }
 * {
     margin: 0;
@@ -69,7 +69,7 @@ body {
 
 
 .banner {
-    background: url('/contents/img/banner.jpg') no-repeat center center/cover;
+    background: url('contents/img/banner.jpg') no-repeat center center/cover;
     height: 300px;
     display: flex;
     align-items: center;
