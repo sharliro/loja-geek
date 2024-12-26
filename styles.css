@@ -1,8 +1,9 @@
 /* Reset básico */
 @font-face {
     font-family: retrica;
-    src: url(contents/fonts/retrica/Retrica\ Free.ttf)
+    src: url(/contents/fonts/retrica/ Free.ttf)
   }
+
 * {
     margin: 0;
     padding: 0;
