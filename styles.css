@@ -145,7 +145,7 @@ p{
 }
 
 .produto-item .btn {
-    background: #007bff;
+    background: #2b5708;
     color: #fff;
     padding: 10px 15px;
     text-decoration: none;
@@ -153,7 +153,7 @@ p{
 }
 
 .produto-item .btn:hover {
-    background: #0056b3;
+    background: #b33000;
 }
 
 .categorias {
@@ -278,7 +278,7 @@ p{
 .produto-item .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #06260b;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -288,5 +288,5 @@ p{
 }
 
 .produto-item .btn:hover {
-    background-color: #0056b3;
+    background-color: #651a05;
 }
