@@ -1,7 +1,9 @@
 /* Reset básico */
 @font-face {
     font-family: retrica;
-    src: url(contents/fonts/retrica/Retrica.otf)
+    src: url(contents/fonts/retrica/Retrica.ttf)
+   
+
   }
 * {
     margin: 0;
@@ -45,8 +47,8 @@ body {
 
 .navigation ul {
     font-size: 1em;
-    background: #26053d;
-    border: #26053d;
+    background: #2e0720;
+    border: #2e0720;
     border-radius: 5px;
     list-style: none;
     display: flex;
@@ -89,7 +91,7 @@ p{
 }
 .banner .btn {
     
-    background: #3b106f;
+    background: #2e0720;
     color: #fff;
     padding: 5px 15px;
     margin-top: 20px;
@@ -171,8 +173,8 @@ p{
 }
 
 .categoria-item {
-    background: #26053d;
-    border: 1px solid #390545;
+    background: #2e0720;
+    border: 1px solid #2e0720;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -240,7 +242,7 @@ p{
 }
 
 .produto-item {
-    background: #2c1422;    
+    background: #2e0720;    
     border-radius: 10px;
     text-align: center;
     padding: 15px;
