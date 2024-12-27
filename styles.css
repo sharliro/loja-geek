@@ -249,11 +249,12 @@ body {
 }
 
 .main-footer {
-    background: #222;
+    background: #2e0720bd;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
+    font-family: retrica;
 }
 
 .main-footer .footer-links {
@@ -265,7 +266,7 @@ body {
 }
 
 .main-footer .footer-links li a {
-    color: #f39c12;
+    color: #b61520dd;
     text-decoration: none;
 }
 
