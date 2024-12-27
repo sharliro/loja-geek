@@ -15,9 +15,6 @@ body {
     line-height: 1.6;
     color: #ffffff;
     background-color: #151313;
-    animation: slideBackground 15s infinite;
-    background-size: cover;
-    background-position: center;
 }
 
 .container {
@@ -26,34 +23,103 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
-.main-header {
-    background: #222;
-    color: #fff;
-    padding: 20px 0;
+ /* Estilos para o vídeo de fundo */
+ .background-video video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Certifica que o vídeo fique atrás de todo o conteúdo */
 }
 
-.main-header .container {
+/* Estilo geral para o corpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Conteúdo principal fica acima do vídeo */
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 50px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo translúcido para destacar o texto */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.main-header {
+    background: #2e0720b5;
+    color: #fff;
+    padding: 0px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 30px;
+    font-family: retrica;
+
 }
 
 .logo {
     font-size: 1.8em;
 }
 
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    display: none; /* Esconde o botão em telas grandes */
+}
+
+.navigation {
+    display: flex; /* Mantém a navegação em linha */
+}
+
 .navigation ul {
-    font-size: 1em;
-    background: #2e0720;
-    border: #2e0720;
-    border-radius: 5px;
     list-style: none;
-    display: flex;
+    display: flex; /* Mantém os itens do menu em linha */
+    padding: 0; /* Remove o padding padrão */
 }
 
 .navigation ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Espaçamento entre os itens */
 }
 
 .navigation ul li a {
@@ -66,8 +132,40 @@ body {
     text-decoration: underline;
 }
 
+/* Estilos para o menu responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas pequenas */
+    }
+
+    .navigation {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        right: 0;
+        background: #222;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .navigation ul {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        padding: 10px 0; /* Adiciona espaçamento */
+    }
+
+    .navigation ul li {
+        margin: 10px 0; /* Espaçamento entre os itens */
+    }
+
+}
+
 .banner {
-    background: url('contents/img/banner.jpg') no-repeat center center/cover;
+    background-color: #2e07208c;
     height: 300px;
     display: flex;
     align-items: center;
@@ -75,15 +173,13 @@ body {
     color: #fff;
     text-align: center;
     border-radius: 15px;
+    font-family: retrica;
+    
 }
 
 .banner h2 {
     font-family: retrica;
     font-size: 4em;
-}
-
-p {
-    color: #ddd;
 }
 
 .banner .btn {
@@ -94,9 +190,6 @@ p {
     text-decoration: none;
     font-weight: bold;
     border-radius: 30px;
-    font-family: retrica;
-    height: 40px;
-    width: 50px;
 }
 
 .banner .btn:hover {
@@ -104,12 +197,13 @@ p {
 }
 
 .produtos {
-    margin: 60px;
+    margin: 60px 0;
 }
 
 .produtos h2 {
     text-align: center;
     font-family: retrica;
+    margin: 50px;
 }
 
 .produtos-grid {
@@ -126,10 +220,11 @@ p {
     padding: 15px;
     text-align: center;
     width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: retrica;
 }
 
 .produto-item img {
-    align-items: center;
     max-width: 100%;
     border-radius: 10px;
 }
@@ -144,6 +239,7 @@ p {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+    font-family: retrica;
 }
 
 .produto-item .btn:hover {
@@ -155,6 +251,7 @@ p {
 }
 
 .categorias h2 {
+    font-family: retrica;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -164,6 +261,7 @@ p {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: retrica;
 }
 
 .categoria-item {
@@ -175,6 +273,7 @@ p {
     width: 200px;
     font-size: 1.2em;
     font-weight: bold;
+    font-family: retrica;
 }
 
 .main-footer {
@@ -207,7 +306,7 @@ p {
     padding: 20px;
     background-color: rgba(30, 30, 30, 0.9);
     color: white;
-    border-radius: 10px;
+    border-radius : 10px;
     margin-bottom: 30px;
 }
 
@@ -220,6 +319,7 @@ p {
     margin: 10px 0 0;
     font-size: 1.2em;
     color: #ccc;
+    font-family: retrica;
 }
 
 .produtos {
@@ -231,7 +331,7 @@ p {
 }
 
 .produto-item {
-    background: #2e0720;
+    background: #2e0720;    
     border-radius: 10px;
     text-align: center;
     padding: 15px;
@@ -280,86 +380,79 @@ p {
     background-color: #651a05;
 }
 
-/* Media Queries para Responsividade */
-
+/* Media Queries */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-
-    .navigation ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .navigation ul li {
-        margin: 10px 0;
+        align-items: flex-start;
     }
 
     .banner h2 {
         font-size: 2.5em;
     }
 
-    .produtos-grid {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .produto-item {
         width: 90%;
-        max-width: 350px;
-    }
-
-    .categorias-grid {
-        flex-direction: column;
     }
 
     .categoria-item {
         width: 90%;
-        max-width: 250px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation ul li {
+        margin: 5px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .main-header {
-        padding: 15px 0;
-    }
-
-    .logo {
-        font-size: 1.3em;
-    }
-
-    .navigation ul li {
-        font-size: 0.9em;
-    }
-
     .banner h2 {
         font-size: 2em;
     }
 
-    .produtos-grid {
-        flex-direction: column;
-        gap: 10px;
+    .header h1 {
+        font-size: 2em;
     }
 
-    .produto-item {
-        width: 90%;
-        max-width: 300px;
+    .header p {
+        font-size: 1em;
     }
 
-    .categorias-grid {
-        flex-direction: column;
+    .produto-item h3 {
+        font-size: 1.2em;
     }
 
-    .categoria-item {
-        width: 90%;
-        max-width: 220px;
-    }
+    .produto-item p {
+        font-size: 1em;
+        font-family: retrica;
+    
+    color: #ffffff;
 }
+
+.produto-item p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.produto-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #06260b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-family: retrica;
+    
+}
+
+.produto-item .btn:hover {
+    background-color: #651a05;
+}}
